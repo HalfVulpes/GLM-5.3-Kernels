@@ -1,0 +1,90 @@
+{
+  "date": "2026-09-10",
+  "new_gpu_execution": false,
+  "standard_library_unit_tests_passed": 5,
+  "moe_cpu_algorithm_cases": 856,
+  "moe_torch_cpu_reference_cases": 1712,
+  "core_computation_ast_equivalence": {
+    "cpu_passed": true,
+    "core_without_vllm_imports": [
+      "titan_kv.py",
+      "titan_mla.py",
+      "titan_moe_align.py"
+    ],
+    "reference_compared": true,
+    "gpu_tested": false,
+    "equivalent_functions": [
+      {
+        "file": "titan_kv.py",
+        "function": "_store_int8",
+        "ast_sha256": "d280ffd128b353d9a7528a6ef4a662c85f833d3eaef0148ae7f324487f17eaf2"
+      },
+      {
+        "file": "titan_kv.py",
+        "function": "store_int8",
+        "ast_sha256": "d26eb9971be4799ffff34b0b8d59b61d7a64cb46afa814fd9dcf32b10bb0b849"
+      },
+      {
+        "file": "titan_mla.py",
+        "function": "_sparse_mla_compute_tile",
+        "ast_sha256": "766d750a01ff17d68a0553681f2b5a2591d9e2546adbb97756a45bff4231106e"
+      },
+      {
+        "file": "titan_mla.py",
+        "function": "_sparse_mla_kernel_final",
+        "ast_sha256": "155b7d1de0ac9c1588e7e7c9e2fbfc91dd32ca68fa70a1b4c8e7bb6cbb3143fb"
+      },
+      {
+        "file": "titan_mla.py",
+        "function": "_sparse_mla_kernel_split",
+        "ast_sha256": "423d6b699c2cc842cb3dbee7ddfa9e73d202ade26f7d2e4e3fa3f459062964ee"
+      },
+      {
+        "file": "titan_mla.py",
+        "function": "_sparse_mla_merge_kernel",
+        "ast_sha256": "b9e7d448d84b126877fc964f3e056868ec3f09c18ac3ba800f0804489c704eb6"
+      },
+      {
+        "file": "titan_mla.py",
+        "function": "_choose_num_kv_splits",
+        "ast_sha256": "b57dbad9968f22d80920ea9d5fcc5d7027f963373d0dbcd7b9578983453b6a80"
+      },
+      {
+        "file": "titan_mla.py",
+        "function": "triton_mla_sparse_attention",
+        "ast_sha256": "e16f365ceee4a098fc575123a0b4549435ea847f1fa318d2f7f01669e462b701"
+      },
+      {
+        "file": "titan_moe_align.py",
+        "function": "_align_small",
+        "ast_sha256": "c359bd4372a7e432e15206d99c62995ffceb36c3c3bbc7afdf9a5bf1a35be197"
+      },
+      {
+        "file": "titan_moe_align.py",
+        "function": "titan_moe_align_small",
+        "ast_sha256": "28dec61d3a03d49dc0c656ad6c6caf0cf582df1b3f0dbddcf41c3a87dbb447d3"
+      }
+    ]
+  },
+  "integration_checks": {
+    "pristine_public_source_preflight": true,
+    "staged_apply": true,
+    "repeat_apply_idempotent": true,
+    "drift_rejected": true,
+    "original_backup_hashes_preserved": true,
+    "indexer_pristine_and_integrated": {
+      "chunks": 2428,
+      "collective_chunks": 2421,
+      "full_output_comparisons": 156
+    },
+    "marlin_call_chain_cases": 19
+  },
+  "wheel": {
+    "build_install_import_passed": true,
+    "torch": "2.13.0+cu130",
+    "triton": "3.7.1",
+    "cuda_initialized": false,
+    "vllm_imported_by_core": false
+  },
+  "interpretation": "CPU/source/package validation of the public release. Historical GPU numerical/performance results are separately labeled in measurements.json."
+}

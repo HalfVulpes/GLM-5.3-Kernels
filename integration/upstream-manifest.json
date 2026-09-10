@@ -1,0 +1,13 @@
+{
+  "repository": "https://github.com/vllm-project/vllm",
+  "revision": "3bec275739c6f4cc7c2ff403d0556d477e4d0f33",
+  "files_sha256": {
+    "v1/kv_cache_interface.py": "7cc794b1863a993dfd04897450640e392bc32525dc9a4c168a76707c99e836fa",
+    "v1/attention/ops/mqa_logits_triton.py": "9aaa6d0e955d272eb49910f915f62c3d4e74da6b9484d77601d2c1e8e5fce419",
+    "v1/attention/backends/mla/indexer.py": "eb6b082a527fe5d0f442e5fa2fae299738f5e1b2f5f940dd0f6bf6b6a89fa70e",
+    "v1/attention/backends/mla/triton_mla_sparse.py": "2aa00f65339f518036c9a0afca8a6a7e19fd9556b5d72f9e0e30af6ea313a371",
+    "model_executor/layers/sparse_attn_indexer_kpool.py": "ba31be4feba9a10a9818c8fee777bf3f79c5c94108f312e2a2f869f2af6acc4a",
+    "model_executor/layers/attention/mla_attention.py": "6efbbb7f1913eb40516586a1a9dbfaa7be80e96c7135bf5a39a6cd6d3ce6f514",
+    "model_executor/layers/fused_moe/experts/marlin_moe.py": "6abb28d2eb1929d441ba58e85f16951bda1869e7f4decdc5d02d333f7961a215"
+  }
+}
