@@ -1,0 +1,246 @@
+{
+  "schema": 1,
+  "passed": true,
+  "independent_metadata_verification_passed": true,
+  "source_receipt_sha256": "aa15261befa1f28a6d323bc36b3301a8f27ebb1304b24368756b4e386da0ddf8",
+  "scheduler_audit_sha256": "f9df18fb227b77cc46399e60a61d6791a9818128907afc6d194d8cd0f1ec3acf",
+  "harness_sha256": "befef4b15c0abebe0d195d476aacd4bd591ab51991b42eed70ba2bad3eeed0da",
+  "observer_sha256": "c1a6d937d4bfc64f8b43fb4e12a216ace0c331e0fd729872727073b010c33c34",
+  "tested_profile": "router_gate_v3+kda_strided+kda_padding+moe_padding_v2",
+  "final_v3_bridge": "padding-env-guard.json; enabled branch and other four payload files unchanged",
+  "configuration": {
+    "context_total": 262144,
+    "input_tokens_each": 260096,
+    "output_tokens_each": 2048,
+    "concurrency": 8,
+    "multimodal_lanes": 8,
+    "images_each": 4,
+    "videos_each": 1,
+    "configured_sampled_frames_each": 32,
+    "temporal_patch_size": 2
+  },
+  "verified_counts": {
+    "requests_passed": 8,
+    "three_value_retrieval_checks_passed": 8,
+    "retrieval_values_passed": 24,
+    "unique_encoder_features": 40,
+    "encoder_features_scheduled": 40,
+    "near_full_resident_requests": 8,
+    "relevant_residency_observations": 122,
+    "preemptions_delta": 0,
+    "logged_oom_patterns": 0,
+    "logged_engine_error_patterns": 0
+  },
+  "media_accounting": {
+    "image_embedding_tokens_each": 16280,
+    "video_embedding_tokens_each": 6624,
+    "video_placeholder_span_each": 6722,
+    "video_span_includes_non_embedding_tokens": 98,
+    "temporal_embedding_groups_each": 16,
+    "represented_frame_slots_each": 32,
+    "raw_sampled_frames_directly_observed": false,
+    "calibration_generation_media_distinct": true
+  },
+  "gates": {
+    "scheduler_request_and_media_counts": true,
+    "all_unique_media_encoder_scheduled": true,
+    "unique_encoder_identifiers": true,
+    "eight_near_full_contexts_resident": true,
+    "all_requests_passed": true,
+    "no_preemptions": true,
+    "no_logged_oom": true,
+    "no_logged_engine_error": true
+  },
+  "timing": {
+    "wall_s": 1007.4401572889983,
+    "prefill_tokens_per_second": 2167.666291533045,
+    "aggregate_decode_tps": 196.88487367606123,
+    "aggregate_response_end_tps": 196.8010953908055,
+    "common_decode_overlap_s": 46.01273985300213
+  },
+  "requests": [
+    {
+      "lane": 0,
+      "passed": true,
+      "http_status": 200,
+      "done": true,
+      "finish_reasons": [
+        "length"
+      ],
+      "retrieval_passed": true,
+      "cached_tokens": 0,
+      "ttft_s": 940.3828200470016,
+      "wall_s": 1006.873293906996,
+      "first_global_s": 940.3835645580039,
+      "last_content_global_s": 1006.8325605639984,
+      "response_end_global_s": 1006.8740384179982,
+      "decode_tps": 30.805582071026837,
+      "decode_to_response_end_tps": 30.786365040957055,
+      "response_tail_s": 0.0414778539998224,
+      "prompt_tokens": 260096,
+      "completion_tokens": 2048,
+      "total_tokens": 262144
+    },
+    {
+      "lane": 1,
+      "passed": true,
+      "http_status": 200,
+      "done": true,
+      "finish_reasons": [
+        "length"
+      ],
+      "retrieval_passed": true,
+      "cached_tokens": 0,
+      "ttft_s": 935.2958180789938,
+      "wall_s": 1006.6029794139977,
+      "first_global_s": 935.3026409899976,
+      "last_content_global_s": 1006.5712738660004,
+      "response_end_global_s": 1006.6098023250015,
+      "decode_tps": 28.72231327295819,
+      "decode_to_response_end_tps": 28.706794123848397,
+      "response_tail_s": 0.03852845900109969,
+      "prompt_tokens": 260096,
+      "completion_tokens": 2048,
+      "total_tokens": 262144
+    },
+    {
+      "lane": 2,
+      "passed": true,
+      "http_status": 200,
+      "done": true,
+      "finish_reasons": [
+        "length"
+      ],
+      "retrieval_passed": true,
+      "cached_tokens": 0,
+      "ttft_s": 950.4833683010002,
+      "wall_s": 1007.2142941510028,
+      "first_global_s": 950.4960935089985,
+      "last_content_global_s": 1007.1911503119991,
+      "response_end_global_s": 1007.2270193590011,
+      "decode_tps": 36.10544049920876,
+      "decode_to_response_end_tps": 36.0826122494862,
+      "response_tail_s": 0.03586904700205196,
+      "prompt_tokens": 260096,
+      "completion_tokens": 2048,
+      "total_tokens": 262144
+    },
+    {
+      "lane": 3,
+      "passed": true,
+      "http_status": 200,
+      "done": true,
+      "finish_reasons": [
+        "length"
+      ],
+      "retrieval_passed": true,
+      "cached_tokens": 0,
+      "ttft_s": 945.4254647139969,
+      "wall_s": 1007.0331048910011,
+      "first_global_s": 945.4440762899976,
+      "last_content_global_s": 1007.0154874740037,
+      "response_end_global_s": 1007.0517164670018,
+      "decode_tps": 33.24594906364159,
+      "decode_to_response_end_tps": 33.22639844861428,
+      "response_tail_s": 0.03622899299807614,
+      "prompt_tokens": 260096,
+      "completion_tokens": 2048,
+      "total_tokens": 262144
+    },
+    {
+      "lane": 4,
+      "passed": true,
+      "http_status": 200,
+      "done": true,
+      "finish_reasons": [
+        "length"
+      ],
+      "retrieval_passed": true,
+      "cached_tokens": 0,
+      "ttft_s": 930.203536797002,
+      "wall_s": 1006.306297150004,
+      "first_global_s": 930.2293099189992,
+      "last_content_global_s": 1006.2906532889974,
+      "response_end_global_s": 1006.3320702720011,
+      "decode_tps": 26.912488122151977,
+      "decode_to_response_end_tps": 26.897841688067682,
+      "response_tail_s": 0.04141698300372809,
+      "prompt_tokens": 260096,
+      "completion_tokens": 2048,
+      "total_tokens": 262144
+    },
+    {
+      "lane": 5,
+      "passed": true,
+      "http_status": 200,
+      "done": true,
+      "finish_reasons": [
+        "length"
+      ],
+      "retrieval_passed": true,
+      "cached_tokens": 0,
+      "ttft_s": 959.8799048079964,
+      "wall_s": 1007.4070489779988,
+      "first_global_s": 959.9115916169976,
+      "last_content_global_s": 1007.4033279470023,
+      "response_end_global_s": 1007.438735787,
+      "decode_tps": 43.10223542420227,
+      "decode_to_response_end_tps": 43.07012415216816,
+      "response_tail_s": 0.03540783999778796,
+      "prompt_tokens": 260096,
+      "completion_tokens": 2048,
+      "total_tokens": 262144
+    },
+    {
+      "lane": 6,
+      "passed": true,
+      "http_status": 200,
+      "done": true,
+      "finish_reasons": [
+        "length"
+      ],
+      "retrieval_passed": true,
+      "cached_tokens": 0,
+      "ttft_s": 924.1902932200028,
+      "wall_s": 1005.9280794549995,
+      "first_global_s": 924.2278168260018,
+      "last_content_global_s": 1005.9243314699997,
+      "response_end_global_s": 1005.9656030609985,
+      "decode_tps": 25.05614846508496,
+      "decode_to_response_end_tps": 25.043496946624657,
+      "response_tail_s": 0.04127159099880373,
+      "prompt_tokens": 260096,
+      "completion_tokens": 2048,
+      "total_tokens": 262144
+    },
+    {
+      "lane": 7,
+      "passed": true,
+      "http_status": 200,
+      "done": true,
+      "finish_reasons": [
+        "length"
+      ],
+      "retrieval_passed": true,
+      "cached_tokens": 0,
+      "ttft_s": 955.1621399369978,
+      "wall_s": 1007.2913608200033,
+      "first_global_s": 955.2056399709982,
+      "last_content_global_s": 1007.300211476002,
+      "response_end_global_s": 1007.3348608540036,
+      "decode_tps": 39.293921436773495,
+      "decode_to_response_end_tps": 39.26780345699235,
+      "response_tail_s": 0.0346493780016317,
+      "prompt_tokens": 260096,
+      "completion_tokens": 2048,
+      "total_tokens": 262144
+    }
+  ],
+  "limits": [
+    "One isolated full-load run; not a statistical performance comparison.",
+    "Encoder scheduling and text retrieval are tested; not visual reasoning accuracy.",
+    "The video span includes timestamps/delimiters; actual embedding tokens are counted separately.",
+    "Retrieval results are checked from the original hashed harness receipt; generated text is not retained in this public export.",
+    "No prompts, responses, media files, host paths, device identifiers or raw logs are exported."
+  ]
+}

@@ -34,6 +34,7 @@ export VLLM_DETERMINISTIC_MOE_ALIGN=1
 export VLLM_SPARSE_INDEXER_MAX_LOGITS_MB=128
 export VLLM_INDEXER_QUERY_SHARD=1
 export VLLM_INDEXER_DECODE_SHARD_MIN_REQS=8
+export VLLM_MOE_SKIP_PADDING=1
 ```
 
 Model/engine choices included TP4, BF16 activations, Marlin W4A16 group32 experts, `TRITON_MLA_SPARSE`, `int8_per_token_head`, context length 262144 and maximum eight active sequences. The model's hybrid planner resolved 2304-token blocks. Merely changing a dtype name does not install the packed layout.
@@ -47,3 +48,38 @@ Prefill query sharding activates at 256 or more query rows. B8 decode sharding r
 No scheduler/admission patches, raw checkpoint cache, image/video processor changes, API/harness fixes, system services, Docker images or model configuration are installed. In particular, this repository alone does not reproduce the original eight-full-context memory/admission result. Check memory headroom and model behavior in your complete engine configuration.
 
 No NCCL transport setting is forced by the installer. The reference machine had four independent PCIe Gen2 x16 paths, no NVLink, and disabled P2P after failed correctness tests. Select and validate transport settings for the actual machine rather than assuming that every SM80 device has the same connectivity.
+
+## Optional router/KDA/padding profile
+
+`integration/apply_decode.py` is independent of the seven-file installer above.
+It accepts the same public vLLM revision and modifies four disjoint files:
+the GLM model caller, the MoE runner, the model KDA layer, and the recurrent
+KDA wrapper. These files are
+unchanged by the existing MLA/indexer/MoE-alignment integration, so either
+installer can be applied first to an offline tree.
+
+```bash
+python -B integration/apply_decode.py --vllm-root ./vllm/vllm
+python -B integration/apply_decode.py --vllm-root ./vllm/vllm --apply
+python -B tests/verify_decode_source.py --vllm-root ./vllm/vllm
+```
+
+All target files, unchanged companions, package runtime bytes and generated
+output hashes are checked before any target write. Default preflight writes
+nothing into the target. Applying creates `.glm53-decode-original/` and
+`.glm53-decode-applied.json`, uses atomic replacement for each file, and restores
+completed file writes if a later write fails. Backups remain available after
+failure. Cross-file visibility is still not atomic to running workers; use an
+offline tree. Matching candidate sources are accepted without rewriting them;
+mixed or drifted trees are rejected. To roll back, restore all four originals
+from the backup in the stopped tree, or use a fresh checkout. Preserve backups
+and manifests until the rollback has been reviewed.
+
+The installer does not install Python dependencies. Reinstall this package in
+the worker environment so `titan_kda_strided` is importable when the modified
+KDA wrapper selects it. The optional module retains its original vLLM imports
+and arithmetic helpers. The three existing standalone modules retain their
+PyTorch/Triton-only contract. No private image is required; the complete
+serving stack and full-model qualification are separate. See
+[DECODE_OPTIMIZATIONS.md](DECODE_OPTIMIZATIONS.md) and the
+[TP4 geometry example](../examples/sm80-tp4-profile.json).

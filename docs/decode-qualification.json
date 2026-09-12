@@ -1,0 +1,171 @@
+{
+  "schema": 1,
+  "status": "accepted_under_bounded_quality_function_stability_criterion",
+  "production_recommended": true,
+  "profile": [
+    "router_gate_v3",
+    "kda_strided",
+    "kda_padding",
+    "moe_padding"
+  ],
+  "public_source_revision": "3bec275739c6f4cc7c2ff403d0556d477e4d0f33",
+  "public_source_matches_tested_runtime_inputs": true,
+  "runtime_module_byte_identical": true,
+  "public_staging_cpu_validation": {
+    "standard_library_tests_passed": 13,
+    "source_preflight_passed": true,
+    "temporary_install_passed": true,
+    "repeat_install_no_writes": true,
+    "injected_write_failure_rollback_passed": true,
+    "gpu_execution_performed": false,
+    "both_existing_and_decode_installer_orders_passed": true,
+    "wheel": {
+      "wheel_built": true,
+      "wheel_version": "0.2.0",
+      "wheel_sha256": "edddd3d21c08ef5fdf5ae315877384bd33037df300eb9ab42266bebea699d14b",
+      "runtime_payload_hashes_match": true,
+      "all_four_modules_present": true,
+      "fla_mit_license_present": true,
+      "cuda_or_vllm_imported": false,
+      "scope": "Final version0.2.0 CPU wheel build and archive byte checks; all four runtime modules and FLA license verified, no package runtime import test in this publication pass."
+    },
+    "public_source_files_verified": 7,
+    "actual_transformed_padding_guards_cpu_double_cases": 9,
+    "final_profile_manifest_sha256": "d5cc6c3e78b17c6e02bf4eb9f6f54377f721161767a004f5d2b5b1e19a3c3d0f"
+  },
+  "full_model_qualification": {
+    "strict_apc_numerical_gate": {
+      "matched_cold_warm_passed": true,
+      "matched_comparisons": 6,
+      "maximum_logprob_delta": 0.0,
+      "functional_cases_passed": 20,
+      "cross_batch_8_to_1_passed": false,
+      "cross_batch_gate_decision": "advisory_nonblocking; release acceptance is answer quality, function and stability",
+      "raw_overall_boundary_passed": false,
+      "compared_tokens_each": 64,
+      "cross_batch_common_prefix_tokens": 39,
+      "cross_batch_common_prefix_max_abs_logprob_delta": 0.3935281038284302,
+      "evidence": "evidence/matched-cache-boundaries.json",
+      "source_receipt_sha256": "90ed055daa8a0b186f61ea847ab54621e0ab007c7d64d58f72b43f1cb95f0376"
+    },
+    "original_baseline_also_failed_strict_gate": true,
+    "full_262144_tokens_x8_with_4_images_1_video_each": {
+      "status": "passed",
+      "passed": true,
+      "source_receipt_sha256": "aa15261befa1f28a6d323bc36b3301a8f27ebb1304b24368756b4e386da0ddf8",
+      "evidence": "evidence/full-context-mm8.json",
+      "tested_profile": "padding_v2; final_v3_enabled_branch_source_bridge",
+      "wall_seconds": 1007.4401572889983,
+      "near_full_resident": 8,
+      "encoder_inputs_scheduled": 40,
+      "retrieval_values_passed": 24,
+      "preemptions": 0,
+      "logged_oom_patterns": 0,
+      "logged_engine_error_patterns": 0
+    },
+    "final_qualified_measurements": {
+      "source_receipt_sha256": "3c192ae1f8797ac60dab7b8c0d70348a5f1075fa4b745710c1b4bef10dfb497a",
+      "baseline_source_receipt_sha256": "7dcd8e817f676e025b9703f05621ed556d09170b998ad68acc940a2b7a72e6aa",
+      "evidence": "evidence/short-decode-performance.json",
+      "groups": [
+        {
+          "batch": 1,
+          "baseline_decode_tps_median": 80.47664732614635,
+          "final_decode_tps_median": 80.54141902597783,
+          "median_change_percent": 0.08048508726883341
+        },
+        {
+          "batch": 4,
+          "baseline_decode_tps_median": 232.56752907973777,
+          "final_decode_tps_median": 238.91645999243462,
+          "median_change_percent": 2.7299300714159758
+        },
+        {
+          "batch": 8,
+          "baseline_decode_tps_median": 350.2401766013929,
+          "final_decode_tps_median": 359.7034046218951,
+          "median_change_percent": 2.7019253223117046
+        }
+      ],
+      "raw_final_overall_passed": false,
+      "all_nine_benchmark_rows_passed": true,
+      "limits": "Separate noninterleaved server processes, three repetitions per batch; observed median differences, not isolated causal estimates or statistical non-inferiority. First-to-last-content aggregate decode rates. Tested v2 padding profile with v3 enabled-branch source bridge."
+    },
+    "coding_and_tool_quality": {
+      "status": "accepted_under_predefined_bounded_criterion",
+      "release_criterion_met": true,
+      "all_quality_checks_passed": false,
+      "evidence": "evidence/quality-comparison.json",
+      "comparison_sha256": "431c01bed7e3ad73d4a00a36ce76f8172664df11236870a9e704e8b796da47c3",
+      "high_common_checks": 18,
+      "high_baseline_passed_checks": 17,
+      "high_candidate_passed_checks": 17,
+      "high_identical_case_pass_fail_vectors": true,
+      "high_candidate_natural_stops": 5,
+      "high_candidate_valid_tool_calls": 2,
+      "high_baseline_completed_tool_calls": 0,
+      "high_tool_parity_claim": false,
+      "off_baseline_passed_checks": 21,
+      "off_candidate_passed_checks": 19,
+      "off_checks": 21,
+      "off_regression_task": "toposort",
+      "high_sse_parity_claim": false,
+      "raw_aggregate_passed_preserved": {
+        "off_baseline": true,
+        "off_candidate": false,
+        "high_baseline": false,
+        "high_candidate": false
+      }
+    }
+  },
+  "limits": [
+    "Source equality and CPU checks are not GPU correctness or throughput measurements.",
+    "Raw cross-batch numerical failures remain recorded; the release criterion is answer quality, function and stability.",
+    "The public staging pass does not claim a fresh pristine vLLM wheel passed full-model qualification.",
+    "Off-mode topological-sort functional regression: candidate19/21 vsbaseline21/21; not relabeled as passed.",
+    "High result matches17/18 common checks with one shared failure; baseline High SSE and tools are uncompleted, so those parity claims are excluded."
+  ],
+  "acceptance_criteria": {
+    "answer_quality": "functional coding and tool checks; no claim of statistical non-inferiority",
+    "function_and_stability": "cache/boundary/cancel behavior plus final-profile full-context/multimodal capacity, no OOM or preemption",
+    "cross_batch_logprob_threshold_blocking": false,
+    "raw_failed_receipts_preserved": true,
+    "quality_criterion_sha256": "c2570d2847e440b78e6f8723fedfcdda7499d05c20ccaecfeaaa70752f1e9778",
+    "defined_before_candidate_high_result": true
+  },
+  "historical_two_component_capacity": {
+    "passed": true,
+    "source_sha256": "0bb27482731691792feed6769ea7485726928071e5a2b619ad03abdace558fc0",
+    "input_tokens_each": 260096,
+    "output_tokens_each": 2048,
+    "requests": 8,
+    "encoder_inputs_executed": 40,
+    "near_full_resident": 8,
+    "preemptions": 0,
+    "gates": {
+      "scheduler_request_and_media_counts": true,
+      "all_unique_media_encoder_scheduled": true,
+      "unique_encoder_identifiers": true,
+      "eight_near_full_contexts_resident": true,
+      "all_requests_passed": true,
+      "no_preemptions": true,
+      "no_logged_oom": true,
+      "no_logged_engine_error": true
+    },
+    "wall_seconds": 1009.3964874290032,
+    "scope": "One full-capacity mixed-media encode/load and text retrieval test; not visual reasoning accuracy or statistical speed comparison.",
+    "profile_scope": "Previous K1v3+K2 before padding fixes; retained only as historical context."
+  },
+  "final_environment_contract": {
+    "VLLM_MOE_SKIP_PADDING": "1",
+    "env_guard_change": "Finalv3 adds an environment feature guard; tested v2 model source is exactly recovered by removing only the import and new predicate operand.",
+    "qualification_bridge_status": "passed: exact source recovery, same enabled branch, false-flag regression and final public source installer checks",
+    "evidence": "evidence/padding-env-guard.json"
+  },
+  "generated_targets_match_final_profile_payload": true,
+  "v3_model_gpu_execution_claimed": true,
+  "enabled_branch_matches_gpu_tested_v2": true,
+  "recommendation_scope": "Reference SM80/70-SM TP4 stack with High-mode configuration; known Off-mode topological-sort regression and cross-batch numerical variation retained. No universal quality or standalone-package capacity guarantee.",
+  "v3_gpu_execution_scope": "High-mode quality test only; capacity and short-throughput tests remain v2 with enabled-branch source bridge.",
+  "v3_loaded_source_evidence": "evidence/final-high-runtime-source.json"
+}

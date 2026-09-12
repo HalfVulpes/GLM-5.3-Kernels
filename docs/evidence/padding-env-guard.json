@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "change": "guard-only VLLM_MOE_SKIP_PADDING prerequisite; no arithmetic change when true",
+  "before_model_sha256": "7b57f99a64f1399f3b1d0c4273e8e41ca5ebc375edd676c7da5a74263f0134ca",
+  "after_model_sha256": "b6ce38024cc92db9fc95c32fcbd69011ab5b978672aaea3b6bdd7e5527a16f2f",
+  "original_v2_restored_exactly_by_removing_new_import_and_guard_term": true,
+  "true_branch_body_ast_identical": true,
+  "false_flag_stale_mask_preserves_input_cpu_test": true,
+  "other_four_payload_files_byte_identical": true,
+  "current_gpu_run_scope": "Prior v2 SHA under flag true; new v3 changes only false-flag handling and import. No GPU execution performed by this audit.",
+  "changed_vllm_files": [
+    "models/glm5next/nvidia/model.py"
+  ],
+  "source_receipt_sha256": "496863df37b48fc42522d498d18d31f34fc2aa398cd3237cb4522fa910110b35",
+  "public_source_padding_guard_cases_passed": 9,
+  "runtime_environment": {
+    "VLLM_MOE_SKIP_PADDING": "1"
+  }
+}

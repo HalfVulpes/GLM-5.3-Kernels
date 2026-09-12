@@ -1,0 +1,107 @@
+{
+  "schema": 1,
+  "purpose": "Reference geometry and engine settings; not an executable deployment or capacity guarantee",
+  "qualification_status": "accepted_under_bounded_quality_function_stability_criterion",
+  "hardware": {
+    "cuda_compute_capability": [
+      8,
+      0
+    ],
+    "sms_per_device": 70,
+    "visible_cuda_devices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "tensor_parallel_ranks": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "one_rank_per_visible_device": true,
+    "interconnect": "PCIe Gen2 x16 per device; no NVLink"
+  },
+  "model_layout": {
+    "activation_dtype": "bfloat16",
+    "expert_weights": "W4A16 group32",
+    "moe_backend": "marlin",
+    "hidden_size": 4096,
+    "routed_experts": 288,
+    "experts_per_token": 8,
+    "kda_heads_per_rank": 16,
+    "kda_key_value_dim": 128,
+    "kda_merged_token_stride": 6416,
+    "kda_state_dtype": "float32"
+  },
+  "reference_complete_engine": {
+    "tensor_parallel_size": 4,
+    "max_model_len": 262144,
+    "max_num_seqs": 8,
+    "max_num_batched_tokens": 2304,
+    "attention_backend": "TRITON_MLA_SPARSE",
+    "kv_cache_dtype": "int8_per_token_head",
+    "kv_cache_memory_bytes_per_device": 15300820992,
+    "enable_prefix_caching": true,
+    "mamba_cache_mode": "align",
+    "mamba_block_size": 2304,
+    "cudagraph_mode": "FULL_DECODE_ONLY",
+    "cudagraph_capture_sizes": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "cpu_offload_gb": 0,
+    "disable_custom_all_reduce": true,
+    "multimodal_limits": {
+      "images": 4,
+      "image_tokens_each": 4096,
+      "videos": 1,
+      "video_tokens": 8192,
+      "sampled_video_frames": 32
+    }
+  },
+  "reference_environment": {
+    "OMP_NUM_THREADS": "1",
+    "VLLM_USE_DEEP_GEMM": "0",
+    "VLLM_SPARSE_INDEXER_MAX_LOGITS_MB": "128",
+    "VLLM_INDEXER_QUERY_SHARD": "1",
+    "VLLM_INDEXER_DECODE_SHARD_MIN_REQS": "8",
+    "NCCL_P2P_DISABLE": "1",
+    "NCCL_IB_DISABLE": "1",
+    "VLLM_MOE_SKIP_PADDING": "1"
+  },
+  "notes": [
+    "Devices are logical visible CUDA indices, not physical host GPU identifiers.",
+    "The reference transport settings reflect this machine's tested PCIe topology.",
+    "Complete-engine scheduler/admission, model loader and multimodal processor changes are not installed by this repository.",
+    "Verify memory capacity, numerical behavior and serving compatibility in the complete engine before deployment.",
+    "VLLM_MOE_SKIP_PADDING=1 is part of the tested profile; the guarded MoE correction does not read the inactive-padding mask when this feature is disabled.",
+    "Quality acceptance is bounded: High matched17/18 common checks; Off19/21 vsbaseline21/21 topological-sort regression remains disclosed."
+  ],
+  "optimization_profile": [
+    "router_gate_v3",
+    "kda_strided",
+    "kda_padding",
+    "moe_padding"
+  ],
+  "acceptance_criteria": {
+    "answer_quality_function_stability_required": true,
+    "cross_batch_0_05_logprob_equality_required": false
+  },
+  "quality_reference_generation": {
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "effort": "high",
+    "thinking_budget": 16384,
+    "max_tokens": 65536,
+    "seed": 37,
+    "scope": "Qualification request settings; seed identifies the test, not a required global serving default."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "scope": "Startup source/ownership metadata from all four ranks of the final v3 High quality test; no GPU timing or universal dispatch claim.",
+  "rank_count": 4,
+  "all_final_v3_model_and_kda_hashes_match": true,
+  "ranks": [
+    {
+      "rank": 0,
+      "source_receipt_sha256": "c004558d17c361833711fab75d6512b967da0320ffeca810aaefe70df0329f25",
+      "passed": true,
+      "model_sha256": "b6ce38024cc92db9fc95c32fcbd69011ab5b978672aaea3b6bdd7e5527a16f2f",
+      "kda_sha256": "979e979f913562a08006c8a2496e2d73ff78acda841480920dd159095fd740a3",
+      "gate_execution_path": "internal_only_v3"
+    },
+    {
+      "rank": 1,
+      "source_receipt_sha256": "76451567c1dadfd2f419b905bf82d03822aed1078b10fc20ea457c0335771395",
+      "passed": true,
+      "model_sha256": "b6ce38024cc92db9fc95c32fcbd69011ab5b978672aaea3b6bdd7e5527a16f2f",
+      "kda_sha256": "979e979f913562a08006c8a2496e2d73ff78acda841480920dd159095fd740a3",
+      "gate_execution_path": "internal_only_v3"
+    },
+    {
+      "rank": 2,
+      "source_receipt_sha256": "0b1ca0bd11eedadff87889b8fe169ce4166126915971a5a6694d3e507fd0ca5c",
+      "passed": true,
+      "model_sha256": "b6ce38024cc92db9fc95c32fcbd69011ab5b978672aaea3b6bdd7e5527a16f2f",
+      "kda_sha256": "979e979f913562a08006c8a2496e2d73ff78acda841480920dd159095fd740a3",
+      "gate_execution_path": "internal_only_v3"
+    },
+    {
+      "rank": 3,
+      "source_receipt_sha256": "cf2257da03eb639690fb0fb6cc0601d188a49fe6357af00ce7d7ac56d42fe37b",
+      "passed": true,
+      "model_sha256": "b6ce38024cc92db9fc95c32fcbd69011ab5b978672aaea3b6bdd7e5527a16f2f",
+      "kda_sha256": "979e979f913562a08006c8a2496e2d73ff78acda841480920dd159095fd740a3",
+      "gate_execution_path": "internal_only_v3"
+    }
+  ]
+}

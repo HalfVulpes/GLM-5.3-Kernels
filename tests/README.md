@@ -79,3 +79,27 @@ output placement using CPU doubles. They do not run NCCL or start a service.
 The public preparation pass ran CPU checks only. The GPU scripts need a new
 explicit run on suitable hardware; do not label their new torch reference or
 graph timings as newly measured until such a run is performed.
+
+## Optional router/KDA/padding source qualification
+
+`test_decode_contracts.py` adds standard-library checks for the exact tested
+KDA runtime hash, reversible pointer-only derivation, both padding source guards,
+the four-component/four-target manifest, path/symlink rejection,
+rollback after an injected write failure, idempotent no-write behavior and
+source-drift rejection. It never imports the vLLM-dependent runtime module.
+
+```bash
+python -B tests/verify_decode_source.py --vllm-root /path/to/vllm/vllm \
+  --exercise-installer
+```
+
+This checks the four public source inputs and three unchanged companions, produces
+the exact tested output hashes, and exercises apply/reapply only in a temporary
+copy. It also executes the actual generated padding guards against CPU indexing
+doubles in nine cases, including preservation of active NaNs and disabled-mask-feature,
+no-context, no-mask and sequence-parallel fallbacks. The provided source stays untouched. See
+`docs/decode-qualification.json` for the separate, bounded full-model release
+qualification. High mode matches17/18 common functional checks; the known
+Off-mode 19/21 versus 21/21 regression and censored High baseline task remain
+explicit. Raw cross-batch numerical failures remain recorded;
+the release acceptance criterion is answer quality, function and stability.

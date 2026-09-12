@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "repository": "https://github.com/vllm-project/vllm",
+  "revision": "3bec275739c6f4cc7c2ff403d0556d477e4d0f33",
+  "profile": [
+    "router_gate_v3",
+    "kda_strided",
+    "kda_padding",
+    "moe_padding"
+  ],
+  "source_verification": "Public revision files and isolated tested runtime files have identical SHA256 values.",
+  "files": {
+    "models/glm5next/nvidia/model.py": {
+      "before_sha256": "2e0bb44a38a96cc788e6bb23bd819b1c642b16aedd0a5fe5e0fec9e7fcfec312",
+      "after_sha256": "b6ce38024cc92db9fc95c32fcbd69011ab5b978672aaea3b6bdd7e5527a16f2f"
+    },
+    "model_executor/layers/fused_moe/runner/moe_runner.py": {
+      "before_sha256": "80d4b53fdbbbaf2aa9408f22ea476bacbdbb9db5cef0e51fca62c36a4f384d25",
+      "after_sha256": "9404da52c7c150a63caafb8f38b1ec5bd8f62d4d8c62cb0c1bf19345fec8b193"
+    },
+    "models/glm5next/nvidia/kda.py": {
+      "before_sha256": "be510e17c1bd0f412a3fefd66b8372e3334233f462b4f447154fe9bf453dfd1f",
+      "after_sha256": "76bdb2868d3e40aad560171f51817417261bbbb6cd76c63d96a0d77963b73f22"
+    },
+    "third_party/flash_linear_attention/ops/kda.py": {
+      "before_sha256": "8508d5e091e645baa86ba698ef1366298fed2070bfa63b40522ce15a434a2c68",
+      "after_sha256": "979e979f913562a08006c8a2496e2d73ff78acda841480920dd159095fd740a3"
+    }
+  },
+  "unchanged_companions": {
+    "model_executor/layers/fused_moe/layer.py": "ebdc4af2f553ce2a70e666f9da3ac647c79d538680c284ce98dd4ac64785661b",
+    "third_party/flash_linear_attention/ops/fused_recurrent.py": "0b5d2bac9463c2711a718084134b5d00f4c0166fcd7758f3db10c7f2b8a05241",
+    "third_party/flash_linear_attention/ops/op.py": "456da84fd12411cf53c96a90dd4f78f49afb454c3d51d2c524ea8e7106fe8ae5"
+  },
+  "runtime_modules": {
+    "titan_kda_strided.py": "ef39789fe50ff69ce95769c318a0a771213a5c22c018d804ec4f458002abaaf9"
+  }
+}

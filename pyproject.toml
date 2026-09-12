@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "glm53-sm80-kernels"
-version = "0.1.0"
+version = "0.2.0"
 description = "Shape-specialized Triton INT8 sparse MLA and MoE routing kernels for GLM-5.3 on SM80"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -15,6 +15,6 @@ dependencies = ["torch", "triton"]
 Repository = "https://github.com/HalfVulpes/GLM-5.3-Kernels"
 
 [tool.setuptools]
-license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md", "licenses/*.txt"]
 package-dir = {"" = "kernels"}
-py-modules = ["titan_kv", "titan_mla", "titan_moe_align"]
+py-modules = ["titan_kv", "titan_mla", "titan_moe_align", "titan_kda_strided"]

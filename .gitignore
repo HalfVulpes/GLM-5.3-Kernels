@@ -15,3 +15,5 @@ dist/
 results/
 .glm53-kernels-original/
 .glm53-kernels-applied.json
+.glm53-decode-original/
+.glm53-decode-applied.json

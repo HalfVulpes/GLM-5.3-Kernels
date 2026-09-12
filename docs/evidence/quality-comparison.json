@@ -1,0 +1,305 @@
+{
+  "schema": 1,
+  "reviewed_utc": "2026-09-12T17:24:06.497660+00:00",
+  "review": "independent offline review of raw quality receipts and scoring protocol",
+  "release_criterion_met": true,
+  "release_criterion_scope": "Quality portion only: matched first-five High tasks meet the predeclared17/18 functional threshold, all naturally stopped, two candidate tool calls valid. Other rollout gates are tracked separately.",
+  "criterion_defined_before_candidate_started": true,
+  "criterion_sha256": "c2570d2847e440b78e6f8723fedfcdda7499d05c20ccaecfeaaa70752f1e9778",
+  "raw_aggregate_passed_preserved": {
+    "off_baseline": true,
+    "off_candidate": false,
+    "high_baseline": false,
+    "high_candidate": false
+  },
+  "off_mode": {
+    "configuration": {
+      "temperature": 0,
+      "enable_thinking": false,
+      "coding_max_tokens": 2048,
+      "coding_seed": 37
+    },
+    "baseline_passed_tasks": 6,
+    "candidate_passed_tasks": 5,
+    "tasks": 6,
+    "baseline_passed_checks": 21,
+    "candidate_passed_checks": 19,
+    "checks": 21,
+    "baseline_tools_passed": 2,
+    "candidate_tools_passed": 2,
+    "tool_cases_each": 2,
+    "regression_task": "toposort",
+    "regression_case_indices_1based": [
+      1,
+      2
+    ],
+    "regression_disclosed": true,
+    "task_comparison": [
+      {
+        "task": "merge_intervals",
+        "baseline_checks": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "candidate_checks": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "identical_pass_fail_vector": true,
+        "baseline_natural_stop": true,
+        "candidate_natural_stop": true,
+        "answer_hash_equal": true
+      },
+      {
+        "task": "lru_trace",
+        "baseline_checks": [
+          true,
+          true,
+          true
+        ],
+        "candidate_checks": [
+          true,
+          true,
+          true
+        ],
+        "identical_pass_fail_vector": true,
+        "baseline_natural_stop": true,
+        "candidate_natural_stop": true,
+        "answer_hash_equal": true
+      },
+      {
+        "task": "decode_rle",
+        "baseline_checks": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "candidate_checks": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "identical_pass_fail_vector": true,
+        "baseline_natural_stop": true,
+        "candidate_natural_stop": true,
+        "answer_hash_equal": false
+      },
+      {
+        "task": "toposort",
+        "baseline_checks": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "candidate_checks": [
+          false,
+          false,
+          true,
+          true
+        ],
+        "identical_pass_fail_vector": false,
+        "baseline_natural_stop": true,
+        "candidate_natural_stop": true,
+        "answer_hash_equal": false
+      },
+      {
+        "task": "deep_merge",
+        "baseline_checks": [
+          true,
+          true,
+          true
+        ],
+        "candidate_checks": [
+          true,
+          true,
+          true
+        ],
+        "identical_pass_fail_vector": true,
+        "baseline_natural_stop": true,
+        "candidate_natural_stop": true,
+        "answer_hash_equal": true
+      },
+      {
+        "task": "sse_data",
+        "baseline_checks": [
+          true,
+          true,
+          true
+        ],
+        "candidate_checks": [
+          true,
+          true,
+          true
+        ],
+        "identical_pass_fail_vector": true,
+        "baseline_natural_stop": true,
+        "candidate_natural_stop": true,
+        "answer_hash_equal": false
+      }
+    ]
+  },
+  "high_mode": {
+    "configuration": {
+      "temperature": 1.0,
+      "top_p": 0.95,
+      "effort": "high",
+      "thinking_budget": 16384,
+      "max_tokens": 65536,
+      "seed": 37
+    },
+    "baseline_completed_tasks": 5,
+    "candidate_completed_tasks": 5,
+    "baseline_passed_tasks": 4,
+    "candidate_passed_tasks": 4,
+    "baseline_passed_checks": 17,
+    "candidate_passed_checks": 17,
+    "checks": 18,
+    "identical_case_pass_fail_vectors": true,
+    "shared_failure": {
+      "task": "lru_trace",
+      "case_indices_1based": [
+        1
+      ]
+    },
+    "all_common_task_responses_naturally_stopped": true,
+    "candidate_tools_passed": 2,
+    "candidate_tool_cases": 2,
+    "baseline_high_tools_completed": 0,
+    "high_tool_parity_claim": false,
+    "task_comparison": [
+      {
+        "task": "merge_intervals",
+        "baseline_checks": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "candidate_checks": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "identical_pass_fail_vector": true,
+        "baseline_natural_stop": true,
+        "candidate_natural_stop": true,
+        "answer_hash_equal": false
+      },
+      {
+        "task": "lru_trace",
+        "baseline_checks": [
+          false,
+          true,
+          true
+        ],
+        "candidate_checks": [
+          false,
+          true,
+          true
+        ],
+        "identical_pass_fail_vector": true,
+        "baseline_natural_stop": true,
+        "candidate_natural_stop": true,
+        "answer_hash_equal": false
+      },
+      {
+        "task": "decode_rle",
+        "baseline_checks": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "candidate_checks": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "identical_pass_fail_vector": true,
+        "baseline_natural_stop": true,
+        "candidate_natural_stop": true,
+        "answer_hash_equal": false
+      },
+      {
+        "task": "toposort",
+        "baseline_checks": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "candidate_checks": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "identical_pass_fail_vector": true,
+        "baseline_natural_stop": true,
+        "candidate_natural_stop": true,
+        "answer_hash_equal": false
+      },
+      {
+        "task": "deep_merge",
+        "baseline_checks": [
+          true,
+          true,
+          true
+        ],
+        "candidate_checks": [
+          true,
+          true,
+          true
+        ],
+        "identical_pass_fail_vector": true,
+        "baseline_natural_stop": true,
+        "candidate_natural_stop": true,
+        "answer_hash_equal": false
+      }
+    ]
+  },
+  "baseline_high_sse_censoring": {
+    "completed": false,
+    "scored": false,
+    "reason": "Isolated baseline test was stopped after prolonged generation without natural completion; no sixth answer was scored.",
+    "candidate_high_sse_run": false,
+    "high_sse_parity_claim": false,
+    "censoring_receipt_sha256": "6de58a174ce40810266ad6466eaab48461b0ecc5c9382a2638d8ef78b2647fcf"
+  },
+  "protocol_review": {
+    "common_task_prompts_settings_seed_and_scorer_identical": true,
+    "candidate_script_differences": [
+      "output receipt filename",
+      "exclude the uncompleted sixth SSE task"
+    ],
+    "scorer_requires_exact_boolean_case_count": true,
+    "generated_execution_separate_globals_restricted_builtins_resource_limits": true,
+    "candidate_script_sha256": "4e923898e5e321b06b96c264ba31101abde4533317f15d232c7e671cbdcb5607",
+    "baseline_script_sha256": "bea12da0c45477906875d78caf5e6d354637c1392a932e3420a6bf882773fe4d",
+    "tool_stop_contract": "Complete parsed named function call with exact arguments; raw named-choice stop is documented and accepted alongside tool_calls."
+  },
+  "raw_receipt_sha256": {
+    "off_baseline": "596d9746dffb5a079b4cc9eeee1c7eb895ca3a465cf85dacb2e5ba0acd92b82e",
+    "off_candidate": "f90519aa5d01b396ca18af658f35b71fc6dba19d207cafe2f88982e6844596d6",
+    "high_baseline": "b2d1dc2139fd19b9128b5020637014985eee5088989178b42edba9b19586fcc8",
+    "high_candidate": "95f3ce6731a4465646b79c1d5b4c164024784f60e5267269e112d3843d30ee34",
+    "high_baseline_censoring": "6de58a174ce40810266ad6466eaab48461b0ecc5c9382a2638d8ef78b2647fcf",
+    "criterion": "c2570d2847e440b78e6f8723fedfcdda7499d05c20ccaecfeaaa70752f1e9778"
+  },
+  "limitations": [
+    "Single-seed small task suite; no broad statistical non-inferiority or universal quality equivalence is established.",
+    "The observed T0/Off topological-sort regression remains a real failed output and is not relabeled as passed.",
+    "High-mode equality is equality of checked functional outcomes, not identical generated code or numerical logits.",
+    "Baseline High SSE and High tools did not complete; only the first-five completed coding tasks form the matched High comparison.",
+    "The user accepted a bounded quality/function/stability tradeoff; release_criterion_met is separate from the original all-tests-perfect passed flags."
+  ]
+}

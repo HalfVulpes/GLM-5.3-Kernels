@@ -1,0 +1,117 @@
+{
+  "schema": 1,
+  "baseline_source_receipt_sha256": "7dcd8e817f676e025b9703f05621ed556d09170b998ad68acc940a2b7a72e6aa",
+  "final_source_receipt_sha256": "3c192ae1f8797ac60dab7b8c0d70348a5f1075fa4b745710c1b4bef10dfb497a",
+  "raw_baseline_overall_passed": true,
+  "raw_final_overall_passed": false,
+  "all_nine_final_benchmark_rows_passed": true,
+  "all_nine_baseline_benchmark_rows_passed": true,
+  "preemptions_delta": 0,
+  "api_errors": 0,
+  "arithmetic_canary": {
+    "raw_exact_format_passed": false,
+    "numeric_result_correct": true,
+    "interpretation": "Final answer included the correct arithmetic equation instead of only the requested number; original failed flag remains unchanged."
+  },
+  "groups": [
+    {
+      "batch": 1,
+      "repetitions_each": 3,
+      "input_tokens_each": 8192,
+      "output_tokens_each": 512,
+      "baseline_decode_tps_samples": [
+        80.50102126680325,
+        80.47664732614635,
+        80.3608705571498
+      ],
+      "final_decode_tps_samples": [
+        80.54141902597783,
+        80.53901496390489,
+        80.5761189223505
+      ],
+      "baseline_decode_tps_median": 80.47664732614635,
+      "final_decode_tps_median": 80.54141902597783,
+      "median_change_percent": 0.08048508726883341,
+      "baseline_output_hash_sets_per_lane": [
+        1
+      ],
+      "final_output_hash_sets_per_lane": [
+        1
+      ],
+      "final_lanes_with_output_hash_not_seen_in_baseline": 1
+    },
+    {
+      "batch": 4,
+      "repetitions_each": 3,
+      "input_tokens_each": 8192,
+      "output_tokens_each": 512,
+      "baseline_decode_tps_samples": [
+        232.56752907973777,
+        231.09198316292597,
+        232.8315580955851
+      ],
+      "final_decode_tps_samples": [
+        238.91645999243462,
+        240.0372673689432,
+        238.58580508875554
+      ],
+      "baseline_decode_tps_median": 232.56752907973777,
+      "final_decode_tps_median": 238.91645999243462,
+      "median_change_percent": 2.7299300714159758,
+      "baseline_output_hash_sets_per_lane": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "final_output_hash_sets_per_lane": [
+        2,
+        2,
+        1,
+        2
+      ],
+      "final_lanes_with_output_hash_not_seen_in_baseline": 3
+    },
+    {
+      "batch": 8,
+      "repetitions_each": 3,
+      "input_tokens_each": 8192,
+      "output_tokens_each": 512,
+      "baseline_decode_tps_samples": [
+        350.2401766013929,
+        350.66819404044026,
+        349.64526063547504
+      ],
+      "final_decode_tps_samples": [
+        359.4964127008676,
+        359.8544685537344,
+        359.7034046218951
+      ],
+      "baseline_decode_tps_median": 350.2401766013929,
+      "final_decode_tps_median": 359.7034046218951,
+      "median_change_percent": 2.7019253223117046,
+      "baseline_output_hash_sets_per_lane": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "final_output_hash_sets_per_lane": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "final_lanes_with_output_hash_not_seen_in_baseline": 7
+    }
+  ],
+  "scope": "Separate noninterleaved server processes, three repetitions per batch; observed median differences, not isolated causal estimates or statistical non-inferiority. First-to-last-content aggregate decode rates. Tested v2 padding profile with v3 enabled-branch source bridge."
+}
