@@ -1,0 +1,32 @@
+[
+  {
+    "phase": "cold",
+    "wall_s": 105.39574603399979,
+    "usage": {
+      "prompt_tokens": 261888,
+      "total_tokens": 261920,
+      "completion_tokens": 32,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "created_cache_tokens": null,
+        "multimodal_tokens": null
+      },
+      "completion_tokens_details": null
+    }
+  },
+  {
+    "phase": "repeat",
+    "wall_s": 1.177537883999321,
+    "usage": {
+      "prompt_tokens": 261888,
+      "total_tokens": 261920,
+      "completion_tokens": 32,
+      "prompt_tokens_details": {
+        "cached_tokens": 260352,
+        "created_cache_tokens": null,
+        "multimodal_tokens": null
+      },
+      "completion_tokens_details": null
+    }
+  }
+]

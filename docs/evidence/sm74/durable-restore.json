@@ -1,0 +1,18 @@
+{
+  "phase": "restore",
+  "correct": true,
+  "wall_s": 0.5968915759999618,
+  "usage": {
+    "prompt_tokens": 14062,
+    "total_tokens": 14066,
+    "completion_tokens": 4,
+    "prompt_tokens_details": {
+      "cached_tokens": 13824,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

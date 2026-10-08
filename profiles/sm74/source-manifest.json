@@ -1,0 +1,19 @@
+{
+  "version": "V20",
+  "upstream": "https://github.com/Morrowmake/vllm-cmp170hx",
+  "commit": "ab60b723ada254a442a4ba5ff27bf837aa27ef83",
+  "files": {
+    "hooks.py": "3b5653b282debaa749783e0aa7ce6e0d07755f8c00e51baccb42a37e5584588d",
+    "prepare_integration.py": "c686fe6d16c9a51fdb0294997e77e400da1fdd7ade07aa5602a83c593d4e2514",
+    "prepare_source.py": "9ff5520d9c91778623f39e661fe914de46105ae451be59f88974da4afaec2a67",
+    "titan_recipe_thin.py": "5f54c562b5315d6019706e2ef01ed1e7ce238dadf4a24dd1c834cf69eb6e5e19",
+    "titan_prefill/index.py": "442c6729840d5583293049bad9249f90d6699ed66595ac0c3c0721e6a7c7a347",
+    "titan_prefill/moe_split_align.py": "cce9fdd5c7f5419c7f57ff4372a3736e01e8ec00df46320a5033cb90ac72fd94",
+    "titan_prefill/kda.py": "0e42cd7aee3010d7624397be8b6ee00fc93d2590d4350e4b6b434f3cd8309a6a",
+    "titan_prefill/metadata_cache.py": "3c39f783b88e73692b3b2cacccadc1840da2cca52b391562736c95f2a58ab9ac",
+    "titan_prefill/extension.py": "d4c0ef4ae1ddda4797dd471ac1737a083a642e06e0112780a24d9fea8c269975",
+    "titan_prefill/marlin.py": "3e2e69cb92829eda80d9b09ecebe93029ed032960f12391c92891016ed92b66c",
+    "titan_prefill/dispatch.py": "b03d11ba5a18c20511a8471a32badba0999aed2e6afb1be6d545e54bdebc7dab",
+    "titan_prefill/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

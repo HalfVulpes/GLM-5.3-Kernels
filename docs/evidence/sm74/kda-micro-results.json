@@ -1,0 +1,237 @@
+[
+  {
+    "lengths": [
+      1
+    ],
+    "initial_state": "zero",
+    "old_us": 617.7792072296143,
+    "new_us": 335.66720485687256,
+    "speedup": 1.8404514897218909,
+    "accuracy": {
+      "output": {
+        "mean_ratio": 0.6152262241303017,
+        "max_ratio": 0.42000497166792033,
+        "ok": true
+      },
+      "state": {
+        "mean_ratio": 0.0017254175555971286,
+        "max_ratio": 0.0025123813894157455,
+        "ok": true
+      }
+    },
+    "deterministic": true
+  },
+  {
+    "lengths": [
+      63
+    ],
+    "initial_state": "real",
+    "old_us": 652.185583114624,
+    "new_us": 305.1520109176636,
+    "speedup": 2.1372481903473264,
+    "accuracy": {
+      "output": {
+        "mean_ratio": 0.7397004241523771,
+        "max_ratio": 0.545526149098681,
+        "ok": true
+      },
+      "state": {
+        "mean_ratio": 0.09171387350970328,
+        "max_ratio": 0.13136226785528043,
+        "ok": true
+      }
+    },
+    "deterministic": true
+  },
+  {
+    "lengths": [
+      64
+    ],
+    "initial_state": "real",
+    "old_us": 658.1247806549072,
+    "new_us": 309.8623991012573,
+    "speedup": 2.123925918613456,
+    "accuracy": {
+      "output": {
+        "mean_ratio": 0.7303306530387685,
+        "max_ratio": 0.34213453683231293,
+        "ok": true
+      },
+      "state": {
+        "mean_ratio": 0.06406510309817064,
+        "max_ratio": 0.02252783980453435,
+        "ok": true
+      }
+    },
+    "deterministic": true
+  },
+  {
+    "lengths": [
+      65
+    ],
+    "initial_state": "real",
+    "old_us": 657.919979095459,
+    "new_us": 309.6575975418091,
+    "speedup": 2.1246692615272535,
+    "accuracy": {
+      "output": {
+        "mean_ratio": 0.739341360067856,
+        "max_ratio": 1.058828481181133,
+        "ok": true
+      },
+      "state": {
+        "mean_ratio": 0.09883158102714674,
+        "max_ratio": 0.06499640064684356,
+        "ok": true
+      }
+    },
+    "deterministic": true
+  },
+  {
+    "lengths": [
+      1,
+      63,
+      64,
+      65
+    ],
+    "initial_state": "mixed",
+    "old_us": 660.0704193115234,
+    "new_us": 308.94079208374023,
+    "speedup": 2.1365596134440135,
+    "accuracy": {
+      "output": {
+        "mean_ratio": 0.7245527185341245,
+        "max_ratio": 0.7249440950498305,
+        "ok": true
+      },
+      "state": {
+        "mean_ratio": 0.05705477746922476,
+        "max_ratio": 0.04601600735855587,
+        "ok": true
+      }
+    },
+    "deterministic": true
+  },
+  {
+    "lengths": [
+      1282
+    ],
+    "initial_state": "real",
+    "old_us": 662.11838722229,
+    "new_us": 336.07680797576904,
+    "speedup": 1.9701400736644357,
+    "accuracy": {
+      "output": {
+        "mean_ratio": 0.6109299302712298,
+        "max_ratio": 0.5995754925133179,
+        "ok": true
+      },
+      "state": {
+        "mean_ratio": 0.1230895057956832,
+        "max_ratio": 0.12981746405589875,
+        "ok": true
+      }
+    },
+    "deterministic": true
+  },
+  {
+    "lengths": [
+      2304
+    ],
+    "initial_state": "zero",
+    "old_us": 874.2912292480469,
+    "new_us": 508.5184097290039,
+    "speedup": 1.7192912046467856,
+    "accuracy": {
+      "output": {
+        "mean_ratio": 0.5933344116385212,
+        "max_ratio": 0.46701958201867805,
+        "ok": true
+      },
+      "state": {
+        "mean_ratio": 0.10313032292300288,
+        "max_ratio": 0.14054976337668376,
+        "ok": true
+      }
+    },
+    "deterministic": true
+  },
+  {
+    "lengths": [
+      2304
+    ],
+    "initial_state": "real",
+    "old_us": 759.2959880828857,
+    "new_us": 442.67520904541016,
+    "speedup": 1.7152439815191824,
+    "accuracy": {
+      "output": {
+        "mean_ratio": 0.6055272780782752,
+        "max_ratio": 0.7642990127194658,
+        "ok": true
+      },
+      "state": {
+        "mean_ratio": 0.09443699961045822,
+        "max_ratio": 0.1308713817725244,
+        "ok": true
+      }
+    },
+    "deterministic": true
+  },
+  {
+    "lengths": [
+      384,
+      384,
+      384,
+      384,
+      384,
+      384
+    ],
+    "initial_state": "mixed",
+    "old_us": 690.0735855102539,
+    "new_us": 394.75200176239014,
+    "speedup": 1.7481192810407185,
+    "accuracy": {
+      "output": {
+        "mean_ratio": 0.6163259186091692,
+        "max_ratio": 0.8559065633443844,
+        "ok": true
+      },
+      "state": {
+        "mean_ratio": 0.09711392296757113,
+        "max_ratio": 0.061807988537420096,
+        "ok": true
+      }
+    },
+    "deterministic": true
+  },
+  {
+    "lengths": [
+      65,
+      65,
+      65,
+      65,
+      65,
+      65,
+      65,
+      65
+    ],
+    "initial_state": "mixed",
+    "old_us": 662.0160102844238,
+    "new_us": 316.6208028793335,
+    "speedup": 2.090879702988824,
+    "accuracy": {
+      "output": {
+        "mean_ratio": 0.7324437326063976,
+        "max_ratio": 0.7569691418270794,
+        "ok": true
+      },
+      "state": {
+        "mean_ratio": 0.07190766275964727,
+        "max_ratio": 0.07501823043653938,
+        "ok": true
+      }
+    },
+    "deterministic": true
+  }
+]

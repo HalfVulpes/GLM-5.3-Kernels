@@ -1,0 +1,50 @@
+[
+  {
+    "rows": 240,
+    "concurrency": 2,
+    "rep": 0,
+    "input_tokens": 6846,
+    "ttft_s": 2.216678003999732,
+    "input_tps": 2271.1451638912627
+  },
+  {
+    "rows": 240,
+    "concurrency": 2,
+    "rep": 1,
+    "input_tokens": 6846,
+    "ttft_s": 2.2188071529999434,
+    "input_tps": 2268.52565330078
+  },
+  {
+    "rows": 240,
+    "concurrency": 2,
+    "rep": 2,
+    "input_tokens": 6846,
+    "ttft_s": 2.2170130044996768,
+    "input_tps": 2269.758290177734
+  },
+  {
+    "rows": 1800,
+    "concurrency": 1,
+    "rep": 0,
+    "input_tokens": 28019,
+    "ttft_s": 10.92650100299943,
+    "input_tps": 2563.745794733489
+  },
+  {
+    "rows": 1800,
+    "concurrency": 1,
+    "rep": 1,
+    "input_tokens": 28019,
+    "ttft_s": 10.94652795300135,
+    "input_tps": 2559.1031120140206
+  },
+  {
+    "rows": 1800,
+    "concurrency": 1,
+    "rep": 2,
+    "input_tokens": 28019,
+    "ttft_s": 10.930629767999562,
+    "input_tps": 2562.690439567479
+  }
+]

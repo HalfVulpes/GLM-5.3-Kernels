@@ -1,0 +1,22 @@
+{
+  "kind": "Marlin compiled tiles group32",
+  "M": 2304,
+  "N": 512,
+  "group_size": 32,
+  "old_us": 4223.999977111816,
+  "new_us": 2761.3439559936523,
+  "speedup": 1.5296899062296774,
+  "mean_error_ratio": 1.0002659867009056,
+  "max_error_ratio": 1.0,
+  "accuracy_ok": true,
+  "deterministic": true,
+  "reference_rows": 2304,
+  "build_info": {
+    "abi_version": 1,
+    "torch_version": "2.13.0",
+    "cuda_version": 13000,
+    "cxx11_abi": 1,
+    "prefill_schedule_version": 2,
+    "prefill_tile_group_size": 32
+  }
+}

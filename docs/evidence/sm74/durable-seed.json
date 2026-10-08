@@ -1,0 +1,18 @@
+{
+  "phase": "seed",
+  "correct": true,
+  "wall_s": 5.788815239000087,
+  "usage": {
+    "prompt_tokens": 14062,
+    "total_tokens": 14066,
+    "completion_tokens": 4,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

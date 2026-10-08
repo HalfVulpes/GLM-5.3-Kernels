@@ -1,8 +1,18 @@
 # GLM-5.3 Kernels
 
-Shape-specialized Triton kernels and optional vLLM source patches for **GLM-5.3 Flash W4A16 on SM80**. Developed for a four-GPU, **70-SM-per-device** system running 262,144-token contexts.
+Shape-specialized Triton kernels and optional vLLM source patches for **GLM-5.3 Flash W4A16 on SM80**. Includes the historical 70-SM profile and the new **74-SM V20** profile for four-GPU SM80 systems with 262,144-token contexts.
 
 This is an inference-only kernel release (no backward/autograd implementation), not a model checkpoint or a complete serving distribution. The three standalone KV/MLA/MoE modules require PyTorch and Triton. The optional `titan_kda_strided` module additionally requires the pinned vLLM utility and recurrence helpers; installing the package does not activate it.
+
+## V20 / 74 SMs
+
+The [optional 74-SM profile](profiles/sm74/README.md) adds qualified BF16 thin
+GEMM, fused KDA prefill and group32 Marlin tiles. No MTP/DFLASH, weight
+requantization or driver changes. Cold-prefill serving improved about 7–9%
+in the matched workload; standalone operator speedups are larger. The prior
+thin-GEMM change raised short single-stream decode from 83.33 to 86.44 tok/s.
+See [V20 measurements, cache checks and limitations](docs/SM74_V20.md).
+Historical sections below retain their original 70-SM qualification scope.
 
 ## Included
 

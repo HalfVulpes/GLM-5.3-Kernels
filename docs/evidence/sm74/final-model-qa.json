@@ -1,0 +1,17 @@
+{
+  "tool_call": true,
+  "decode_tps": [
+    86.19464638887031,
+    86.21242357376681,
+    86.19384912952903
+  ],
+  "eight_concurrent_requests_passed": true,
+  "observed_running_peak": 8,
+  "image_recognition": true,
+  "image_answer": "EIGHT-262K",
+  "max_model_len": 262144,
+  "GPU_KV_tokens": 2293227,
+  "full_eight_262K_prefill_rerun": false,
+  "mtp": false,
+  "dflash": false
+}

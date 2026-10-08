@@ -1,0 +1,154 @@
+[
+  {
+    "kind": "KDA",
+    "capture": "kda-0.pt",
+    "T": 2304,
+    "old_us": 874.239981174469,
+    "new_us": 508.1599950790405,
+    "speedup": 1.7204030022837344,
+    "accuracy": {
+      "output": {
+        "mean_ratio": 0.7250397456326274,
+        "max_ratio": 0.6003945306224002,
+        "ok": true
+      },
+      "state": {
+        "mean_ratio": 0.05904078609089311,
+        "max_ratio": 0.06676432570988045,
+        "ok": true
+      }
+    }
+  },
+  {
+    "kind": "KDA",
+    "capture": "kda-15.pt",
+    "T": 2304,
+    "old_us": 695.0399875640869,
+    "new_us": 412.28801012039185,
+    "speedup": 1.685811788126288,
+    "accuracy": {
+      "output": {
+        "mean_ratio": 0.6977829773765316,
+        "max_ratio": 0.4686227992718715,
+        "ok": true
+      },
+      "state": {
+        "mean_ratio": 0.08018681393284496,
+        "max_ratio": 0.018329643738899615,
+        "ok": true
+      }
+    }
+  },
+  {
+    "kind": "KDA",
+    "capture": "kda-33.pt",
+    "T": 2304,
+    "old_us": 694.9120163917542,
+    "new_us": 408.1920087337494,
+    "speedup": 1.7024145537474817,
+    "accuracy": {
+      "output": {
+        "mean_ratio": 0.7319478739336005,
+        "max_ratio": 1.0,
+        "ok": true
+      },
+      "state": {
+        "mean_ratio": 0.04183421436387307,
+        "max_ratio": 0.04264171217184439,
+        "ok": true
+      }
+    }
+  },
+  {
+    "kind": "KDA",
+    "capture": "kda-34.pt",
+    "T": 2304,
+    "old_us": 695.0399875640869,
+    "new_us": 410.3679955005646,
+    "speedup": 1.6936993020527369,
+    "accuracy": {
+      "output": {
+        "mean_ratio": 0.7350843084161899,
+        "max_ratio": 0.7626200972509469,
+        "ok": true
+      },
+      "state": {
+        "mean_ratio": 0.06945682461999367,
+        "max_ratio": 0.13085109054717076,
+        "ok": true
+      }
+    }
+  },
+  {
+    "kind": "KDA",
+    "capture": "kda-49.pt",
+    "T": 2304,
+    "old_us": 694.6560144424438,
+    "new_us": 408.57601165771484,
+    "speedup": 1.7001879567623588,
+    "accuracy": {
+      "output": {
+        "mean_ratio": 0.7268089263320965,
+        "max_ratio": 0.6957104452687322,
+        "ok": true
+      },
+      "state": {
+        "mean_ratio": 0.0965775291844411,
+        "max_ratio": 0.13540915282405996,
+        "ok": true
+      }
+    }
+  },
+  {
+    "kind": "KDA",
+    "capture": "kda-67.pt",
+    "T": 2304,
+    "old_us": 695.2959895133972,
+    "new_us": 411.1360013484955,
+    "speedup": 1.6911581258583002,
+    "accuracy": {
+      "output": {
+        "mean_ratio": 0.734123858801883,
+        "max_ratio": 0.6950815325007065,
+        "ok": true
+      },
+      "state": {
+        "mean_ratio": 0.04798106308879935,
+        "max_ratio": 0.04519769973574676,
+        "ok": true
+      }
+    }
+  },
+  {
+    "kind": "KDA",
+    "capture": "kda-68.pt",
+    "T": 2304,
+    "old_us": 694.1440105438232,
+    "new_us": 409.34398770332336,
+    "speedup": 1.6957474187868415,
+    "accuracy": {
+      "output": {
+        "mean_ratio": 0.7352920797052027,
+        "max_ratio": 0.6203152289971331,
+        "ok": true
+      },
+      "state": {
+        "mean_ratio": 0.07250955686675922,
+        "max_ratio": 0.15825925828154785,
+        "ok": true
+      }
+    }
+  },
+  {
+    "kind": "Marlin split, original compiled library",
+    "M": 2304,
+    "N": 512,
+    "old_us": 4193.535804748535,
+    "new_us": 3109.3759536743164,
+    "speedup": 1.3486744180268966,
+    "output_mean_difference": 2.792664872686146e-07,
+    "mean_error_ratio": 1.0000580954342528,
+    "max_error_ratio": 1.0,
+    "accuracy_ok": true
+  }
+]

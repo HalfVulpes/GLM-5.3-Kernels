@@ -1,0 +1,249 @@
+{
+  "variant": "candidate",
+  "cold": [
+    {
+      "rows": 240,
+      "concurrency": 1,
+      "rep": 0,
+      "input_tokens": 3423,
+      "median_ttft_s": 1.4305322449999949,
+      "max_ttft_s": 1.4305322449999949,
+      "batch_wall_s": 1.4429252950003502,
+      "batch_input_tps": 2372.264185720834,
+      "cached_tokens": 0
+    },
+    {
+      "rows": 240,
+      "concurrency": 1,
+      "rep": 1,
+      "input_tokens": 3423,
+      "median_ttft_s": 1.4234135919996334,
+      "max_ttft_s": 1.4234135919996334,
+      "batch_wall_s": 1.433769062000465,
+      "batch_input_tps": 2387.413768870185,
+      "cached_tokens": 0
+    },
+    {
+      "rows": 240,
+      "concurrency": 2,
+      "rep": 0,
+      "input_tokens": 6846,
+      "median_ttft_s": 2.2274496425002326,
+      "max_ttft_s": 3.0216714100006357,
+      "batch_wall_s": 3.032066699999632,
+      "batch_input_tps": 2257.8658972115722,
+      "cached_tokens": 0
+    },
+    {
+      "rows": 240,
+      "concurrency": 2,
+      "rep": 1,
+      "input_tokens": 6846,
+      "median_ttft_s": 2.2124378240000624,
+      "max_ttft_s": 3.0008845680004015,
+      "batch_wall_s": 3.010176492000028,
+      "batch_input_tps": 2274.2852514442984,
+      "cached_tokens": 0
+    },
+    {
+      "rows": 240,
+      "concurrency": 4,
+      "rep": 0,
+      "input_tokens": 13692,
+      "median_ttft_s": 5.153706512499866,
+      "max_ttft_s": 5.462050479000027,
+      "batch_wall_s": 5.474399588999404,
+      "batch_input_tps": 2501.0961982960744,
+      "cached_tokens": 0
+    },
+    {
+      "rows": 240,
+      "concurrency": 4,
+      "rep": 1,
+      "input_tokens": 13692,
+      "median_ttft_s": 5.1477669470000365,
+      "max_ttft_s": 5.45452952100004,
+      "batch_wall_s": 5.46520403499926,
+      "batch_input_tps": 2505.304452005121,
+      "cached_tokens": 0
+    },
+    {
+      "rows": 240,
+      "concurrency": 6,
+      "rep": 0,
+      "input_tokens": 20538,
+      "median_ttft_s": 8.08345254149981,
+      "max_ttft_s": 8.088457066000046,
+      "batch_wall_s": 8.095562807999158,
+      "batch_input_tps": 2536.9452979484727,
+      "cached_tokens": 0
+    },
+    {
+      "rows": 240,
+      "concurrency": 6,
+      "rep": 1,
+      "input_tokens": 20538,
+      "median_ttft_s": 8.08489182350013,
+      "max_ttft_s": 8.086677917000088,
+      "batch_wall_s": 8.09724661600012,
+      "batch_input_tps": 2536.4177446957106,
+      "cached_tokens": 0
+    },
+    {
+      "rows": 900,
+      "concurrency": 1,
+      "rep": 0,
+      "input_tokens": 13891,
+      "median_ttft_s": 5.55563673800043,
+      "max_ttft_s": 5.55563673800043,
+      "batch_wall_s": 5.563320481000119,
+      "batch_input_tps": 2496.890130173269,
+      "cached_tokens": 0
+    },
+    {
+      "rows": 900,
+      "concurrency": 1,
+      "rep": 1,
+      "input_tokens": 13891,
+      "median_ttft_s": 5.537498968000364,
+      "max_ttft_s": 5.537498968000364,
+      "batch_wall_s": 5.543269179999697,
+      "batch_input_tps": 2505.921965709188,
+      "cached_tokens": 0
+    },
+    {
+      "rows": 900,
+      "concurrency": 1,
+      "rep": 2,
+      "input_tokens": 13891,
+      "median_ttft_s": 5.539346797999315,
+      "max_ttft_s": 5.539346797999315,
+      "batch_wall_s": 5.543508855000255,
+      "batch_input_tps": 2505.8136215423006,
+      "cached_tokens": 0
+    },
+    {
+      "rows": 1800,
+      "concurrency": 1,
+      "rep": 0,
+      "input_tokens": 28019,
+      "median_ttft_s": 10.961054025000522,
+      "max_ttft_s": 10.961054025000522,
+      "batch_wall_s": 10.962351955000486,
+      "batch_input_tps": 2555.929613920041,
+      "cached_tokens": 0
+    },
+    {
+      "rows": 1800,
+      "concurrency": 1,
+      "rep": 1,
+      "input_tokens": 28019,
+      "median_ttft_s": 10.982166782000604,
+      "max_ttft_s": 10.982166782000604,
+      "batch_wall_s": 10.983512124000299,
+      "batch_input_tps": 2551.0055147820253,
+      "cached_tokens": 0
+    },
+    {
+      "rows": 1800,
+      "concurrency": 1,
+      "rep": 2,
+      "input_tokens": 28019,
+      "median_ttft_s": 10.947669440999562,
+      "max_ttft_s": 10.947669440999562,
+      "batch_wall_s": 10.949582201999874,
+      "batch_input_tps": 2558.91042079053,
+      "cached_tokens": 0
+    }
+  ],
+  "quality": [
+    {
+      "question": "What is 17*23? Reply only with the number.",
+      "answer": "391",
+      "expected": "391",
+      "passed": true
+    },
+    {
+      "question": "What is the value of sum(i*i for i in range(5)) in Python? Reply only the number.",
+      "answer": "0+1+4+9+16 = 30",
+      "expected": "30",
+      "passed": true
+    },
+    {
+      "question": "Convert hexadecimal 2A to decimal. Reply only the number.",
+      "answer": "42",
+      "expected": "42",
+      "passed": true
+    },
+    {
+      "question": "A farmer has 17 sheep. All but 9 die. How many remain? Reply only the number.",
+      "answer": "9",
+      "expected": "9",
+      "passed": true
+    },
+    {
+      "question": "A snail climbs a 30-foot wall. Each day it climbs 5 feet and each night slides down 4 feet. How many days to reach the top? Reply only the number.",
+      "answer": "26",
+      "expected": "26",
+      "passed": true
+    },
+    {
+      "question": "What does Python len(set([1,1,2,3,3])) return? Reply only the number.",
+      "answer": "3",
+      "expected": "3",
+      "passed": true
+    },
+    {
+      "question": "A list has [3, 1, 4, 1, 5]. What is the sum? Reply only the number.",
+      "answer": "14",
+      "expected": "14",
+      "passed": true
+    },
+    {
+      "question": "Decode JSON {\"items\":[{\"n\":4},{\"n\":7}]}. Return the sum of the n fields only.",
+      "answer": "11",
+      "expected": "11",
+      "passed": true
+    },
+    {
+      "question": "What does (13 ^ 7) evaluate to in Python? Reply only the number.",
+      "answer": "11",
+      "expected": "10",
+      "passed": false
+    },
+    {
+      "question": "Find the missing term: 2, 6, 12, 20, 30, __. Reply only the number.",
+      "answer": "42",
+      "expected": "42",
+      "passed": true
+    }
+  ],
+  "cache": {
+    "cold": {
+      "tokens": 4,
+      "ttft_s": 5.354197568000018,
+      "wall_s": 5.378730660000656,
+      "decode_tps": 263.61964534644903,
+      "prompt_tokens": 13759,
+      "cached": 0
+    },
+    "repeat": {
+      "tokens": 4,
+      "ttft_s": 0.9555805949994465,
+      "wall_s": 0.9793321349998223,
+      "decode_tps": 269.99545866940616,
+      "prompt_tokens": 13759,
+      "cached": 11520
+    },
+    "append": {
+      "tokens": 7,
+      "ttft_s": 0.9533155189992613,
+      "wall_s": 1.0126615969993509,
+      "decode_tps": 128.6452019999731,
+      "prompt_tokens": 13763,
+      "cached": 11520
+    }
+  },
+  "quality_correct": 9,
+  "done": true
+}

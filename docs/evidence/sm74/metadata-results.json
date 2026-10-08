@@ -1,0 +1,14 @@
+{
+  "mutation_checks": [
+    {
+      "inference_tensor": false,
+      "in_place_change_correct": true
+    },
+    {
+      "inference_tensor": true,
+      "in_place_change_correct": true
+    }
+  ],
+  "forward_epoch_cache_correct": true,
+  "captured_inputs_use_candidate_path": true
+}

@@ -18,3 +18,14 @@ custom-operator interface; it does not vendor a new gate GEMM implementation.
 Two additional Apache-2.0 source transforms define inactive KDA output rows
 and masked MoE input rows in the pinned GLM model. They retain the original
 source notices and do not change model weights.
+
+## V20 / 74-SM addon
+
+`profiles/sm74` derives from Morrowmake/vllm-cmp170hx commit
+`ab60b723ada254a442a4ba5ff27bf837aa27ef83`. vLLM-derived thin GEMM, Marlin
+and route-alignment code are Apache-2.0. Flash Linear Attention KDA/index
+helpers retain MIT attribution, including the original copyright headers.
+Licenses are reproduced in `licenses/sm74-vllm-Apache-2.0.txt` and
+`licenses/sm74-fla-MIT.txt`. Local changes include group32 native tile
+preparation, bounded dispatch, per-forward metadata invalidation, ABI checks
+and offline integration. The source preparer obtains no weights or binaries.

@@ -1,0 +1,86 @@
+[
+  {
+    "M": 383,
+    "fallback": true
+  },
+  {
+    "M": 384,
+    "routing": "real",
+    "finite": true,
+    "deterministic_graph": true,
+    "max_abs_delta": 0.0078125,
+    "fp64_mean_ratio": 1.0001847029070599,
+    "fp64_max_ratio": 1.0
+  },
+  {
+    "M": 768,
+    "routing": "real",
+    "finite": true,
+    "deterministic_graph": true,
+    "max_abs_delta": 0.015625,
+    "fp64_mean_ratio": 0.9999529108695671,
+    "fp64_max_ratio": 1.0
+  },
+  {
+    "M": 1282,
+    "routing": "real",
+    "finite": true,
+    "deterministic_graph": true,
+    "max_abs_delta": 0.015625,
+    "fp64_mean_ratio": 1.0000123204916018,
+    "fp64_max_ratio": 1.0
+  },
+  {
+    "M": 2304,
+    "routing": "concentrated",
+    "finite": true,
+    "deterministic_graph": true,
+    "max_abs_delta": 0.001953125,
+    "fp64_mean_ratio": 1.0000418999487204,
+    "fp64_max_ratio": 1.0
+  },
+  {
+    "M": 768,
+    "routing": "invalid",
+    "finite": true,
+    "deterministic_graph": true,
+    "max_abs_delta": 0.015625,
+    "fp64_mean_ratio": 1.0000000531050848,
+    "fp64_max_ratio": 1.0
+  },
+  {
+    "KDA_lengths": [
+      0,
+      64
+    ],
+    "accuracy": true,
+    "deterministic_graph": true
+  },
+  {
+    "KDA_lengths": [
+      64,
+      0
+    ],
+    "accuracy": true,
+    "deterministic_graph": true
+  },
+  {
+    "KDA_lengths": [
+      0,
+      0,
+      65
+    ],
+    "accuracy": true,
+    "deterministic_graph": true
+  },
+  {
+    "KDA_lengths": [
+      1,
+      63,
+      64,
+      65
+    ],
+    "accuracy": true,
+    "deterministic_graph": true
+  }
+]
