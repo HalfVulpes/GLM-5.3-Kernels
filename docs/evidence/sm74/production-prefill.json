@@ -1,0 +1,19 @@
+{
+  "warmup": {
+    "tokens": 16,
+    "ttft_s": 12.106698240000014,
+    "wall_s": 12.262563765000095,
+    "decode_tps": 96.43527023574221,
+    "prompt_tokens": 28027,
+    "cached": 0
+  },
+  "measurement": {
+    "tokens": 16,
+    "ttft_s": 10.925945414000125,
+    "wall_s": 11.08213611300016,
+    "decode_tps": 96.24278188765307,
+    "prompt_tokens": 28026,
+    "cached": 0
+  },
+  "input_tps_ttft": 2565.0869501954917
+}
